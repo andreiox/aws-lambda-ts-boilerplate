@@ -1,0 +1,34 @@
+{
+  "name": "aws-lambda-ts-boilerplate",
+  "version": "1.0.0",
+  "description": "My AWS Lambda function",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreiox/aws-lambda-ts-boilerplate.git"
+  },
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "typescript",
+    "boilerplate"
+  ],
+  "author": "Andre Macedo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreiox/aws-lambda-ts-boilerplate/issues"
+  },
+  "homepage": "https://github.com/andreiox/aws-lambda-ts-boilerplate#readme",
+  "dependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/node": "^12.11.7",
+    "aws-sdk": "^2.556.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  }
+}

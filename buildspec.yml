@@ -1,0 +1,30 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - npm install -g typescript
+      - npm ci
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build
+      - export BUCKET=my-bucket-for-artifacts
+      - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
+  post_build:
+    commands:
+      - echo Build completed on `date`
+cache:
+  paths:
+    - 'node_modules/**/*'
+artifacts:
+  files:
+    - 'dist/**/*'
+    - 'node_modules/**/*'
+    - 'package.json'
+    - 'template.yml'
+    - 'outputtemplate.yml'
