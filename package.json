@@ -24,11 +24,13 @@
     "url": "https://github.com/andreiox/aws-lambda-ts-boilerplate/issues"
   },
   "homepage": "https://github.com/andreiox/aws-lambda-ts-boilerplate#readme",
-  "dependencies": {
+  "devDependencies": {
     "@types/aws-sdk": "^2.7.0",
     "@types/node": "^12.11.7",
-    "aws-sdk": "^2.556.0",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.556.0"
   }
 }
